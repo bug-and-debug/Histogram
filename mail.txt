@@ -1,0 +1,160 @@
+______________________req______________________________
+I have a new task requirement. Its a simple one. Pls go through the task details and let me know if you can get this executed.
+
+Thanks
+Shruthi
+
+Currently, my script is Printing the following stats on the Histogram : 
+Mean = 
+Std deviation =
+Median = 
+
+Where my histogram has "wake time" on the X- axis and "Occurances" on the Y-axis.My histogram prints the Number of wakes.
+
+This is what i want my histogram to print now , KEEPING THE OLD stats calculated : (Task for you TO DO)
+
+No of wakes < 5s = 
+No of wakes > 5s & < 10s =
+No of wakes > 10s  & < 20s =
+No of wakes > 20s  & < 30s =
+No of wakes > 30 s = 
+
+These stats should get printed on the graph as well and also on the results.txt file that I am uploading to the google drive.. 
+
+Note - this calculation we need  for Histogram only and for Channel1 - Host only. So keep /or set the min-wake_time (Host_min_wake time) for HOST and histogram as 3sec and greater.
+
+Do not do this for any other channels at all.
+
+On the Histogram (at the top right hand corner ) make sure to print the below results calculated and also move the current (mean ,std ,median values from the place it�s getting printed to the the top right hand corner of the graph) and Results.txt also should have these values in .
+
+
+Histogram Stats
+
+No of wakes < 5s = 
+No of wakes > 5s & < 10s =
+No of wakes > 10s  & < 20s =
+No of wakes > 20s  & < 30s =
+No of wakes > 30 s = 
+
+Mean = 
+Std deviation =
+Median = 
+
+Command to run the script :
+
+shruthireddy-macbookpro:downloads shruthireddy$ python /Users/shruthireddy/Downloads/x-test.py --file /Users/shruthireddy/Downloads/X1-Test.csv --channel1 HOST --channel2 WIFI --channel3 NCP --channel4 CELLULAR --build test 
+
+or 
+
+shruthireddy-macbookpro:downloads shruthireddy$ python /Users/shruthireddy/Downloads/x-test.py --file /Users/shruthireddy/Downloads/X1-Test.csv --channel1 HOST --channel2 WIFI --channel3 NCP --channel4 CELLULAR --build test --plot-only on
+____________________________________________________________________________________
+
+Hi ,
+
+PFA the below module. Pls keep this module in the same folder as the other script is when you are running . 
+
+Also you need to have the following packages to run the script :
+
+pip install numpy
+pip install matplotlib
+pip install httplib2
+pip install --upgrade google-api-python-client
+pip install pydrive
+
+You can comment out that part where its uploading to google drive and run the script for now. Since that is not necessary as of now.
+
+Thanks
+
+____________________________________________________________________________________
+The csv has 4 channels of current values along with time /sample number.
+Now these current samples are got from a device that is  tested. 
+Using the script we are calculating a few values like : Wake interval , wake time , idle time , wake current , overall current , total wakes, total wake time , total idle time , total test time. 
+So You can see below that for each channel we do the calculations and print the graphs respectively. 
+
+
+
+Now what I am looking for is the histogram - So the histogram prints number of wakes . 
+
+X axis is the wake time that the device under test was awake , now this wake time is calculated based on the channel 1 host current values. 
+Y axis is the number of occurrences i.e the number of times a wake has occurred . For e.g. 100 wakes which were awake for 10 seconds , 15 wakes which has a wake time of 3 sec etc
+
+
+So you need to only concentrate on the histogram stats generation that I have asked for. For this you need to only make sure you change the Host_min_wake time to 3 sec or greater.
+
+Then you need to make sure in the histogram plot generation part you actually put the limits as I mentioned :
+
+Histogram Stats
+
+No of wakes < 5s = 
+
+No of wakes > 5s & < 10s =
+
+No of wakes > 10s  & < 30s =
+
+No of wakes > 30 s = 
+
+
+
+Mean = 
+
+Std deviation =
+
+Median = 
+
+
+
+Averages of Channel C1-HOST
+Wake Interval:   44.436 s
+Wake Time:       2.374 s
+Idle Time:       42.057 s
+Wake Current:    5.914 mA
+Idle Current:    0.435 mA
+Overall Current: 0.739 mA
+Total Wakes:     243
+Total Wake Time: 576.822 s
+Total Idle Time: 10177.887 s
+Total Test Time: 10754.709 s
+ 
+
+Averages of Channel C2-WIFI
+Wake Interval:   175.935 s
+Wake Time:       2.800 s
+Idle Time:       173.021 s
+Wake Current:    60.124 mA
+Idle Current:    0.126 mA
+Overall Current: 0.201 mA
+Total Wakes:     8
+Total Wake Time: 22.401 s
+Total Idle Time: 1211.146 s
+Total Test Time: 1233.547 s
+ 
+
+Averages of Channel C3-NCP 
+Wake Interval:   1.083 s
+Wake Time:       0.117 s
+Idle Time:       0.967 s
+Wake Current:    24.942 mA
+Idle Current:    24.264 mA
+Overall Current: 24.401 mA
+Total Wakes:     9967
+Total Wake Time: 1163.944 s
+Total Idle Time: 9632.366 s
+Total Test Time: 10796.310 s
+ 
+
+Averages of Channel C4-CELLULAR
+Wake Interval:   8.926 s
+Wake Time:       0.119 s
+Idle Time:       8.807 s
+Wake Current:    2.207 mA
+Idle Current:    0.017 mA
+Overall Current: 0.071 mA
+Total Wakes:     1210
+Total Wake Time: 144.305 s
+Total Idle Time: 10647.605 s
+Total Test Time: 10791.910 s
+I have attached below 4 graphs and a histogram as an example of how the graphs look when i run the script with any csv that we generate.
+
+Pls ping me if you have any questions
+
+Thanks 

@@ -1,0 +1,95 @@
+BUILD NUMBER :  test 
+INPUT FILE :  test.csv 
+TIME :  2017-09-27 17:39:32 
+Graphs :  https://drive.google.com/drive/u/1/folders/ASNUIEFHKAJFFNUQRAEFHJENF 
+ 
+ 
+Averages of Channel C1 - HOST 
+ 
+Wake Interval:   12.697 s
+Wake Time:       4.014 s
+Idle Time:       8.683 s
+Wake Current:    94.259 mA
+Idle Current:    21.544 mA
+Overall Current: 45.218 mA
+Total Wakes:     849
+Total Wake Time: 3408.130 s
+Total Idle Time: 7362.780 s
+Total Test Time: 10770.909 s
+ 
+HOST : BUG when device is awake for 67.6 seconds. Start time: Thu Sep 27 17:51:35.327400 . 
+HOST : BUG when device is awake for 33.9 seconds. Start time: Thu Sep 27 17:53:37.232100 . 
+HOST : BUG when device is awake for 39.6 seconds. Start time: Thu Sep 27 20:35:15.700600 . 
+ 
+Averages of Channel C2 - WIFI 
+ 
+Wake Interval:   3.579 s
+Wake Time:       0.324 s
+Idle Time:       3.255 s
+Wake Current:    2.876 mA
+Idle Current:    0.035 mA
+Overall Current: 0.377 mA
+Total Wakes:     3015
+Total Wake Time: 976.737 s
+Total Idle Time: 9809.873 s
+Total Test Time: 10786.610 s
+ 
+ 
+Averages of Channel C3 - NCP 
+ 
+Wake Interval:   1.881 s
+Wake Time:       1.754 s
+Idle Time:       0.126 s
+Wake Current:    21.406 mA
+Idle Current:    20.730 mA
+Overall Current: 21.397 mA
+Total Wakes:     5742
+Total Wake Time: 10072.583 s
+Total Idle Time: 725.128 s
+Total Test Time: 10797.710 s
+ 
+--- BUG --- 
+ 
+Averages of Channel C4 - CELLULAR 
+ 
+Wake Interval:   0.894 s
+Wake Time:       0.552 s
+Idle Time:       0.341 s
+Wake Current:    42.785 mA
+Idle Current:    1.682 mA
+Overall Current: 31.852 mA
+Total Wakes:     12052
+Total Wake Time: 6657.953 s
+Total Idle Time: 4113.756 s
+Total Test Time: 10771.709 s
+ 
+CELLULAR : BUG when device is awake for 65.5 seconds. Start time: Thu Sep 27 17:49:43.923200 . 
+CELLULAR : BUG when device is awake for 218.9 seconds. Start time: Thu Sep 27 17:51:13.926600 . 
+CELLULAR : BUG when device is awake for 81.4 seconds. Start time: Thu Sep 27 18:18:40.089200 . 
+CELLULAR : BUG when device is awake for 41.7 seconds. Start time: Thu Sep 27 19:01:42.887300 . 
+CELLULAR : BUG when device is awake for 51.9 seconds. Start time: Thu Sep 27 19:19:03.226800 . 
+CELLULAR : BUG when device is awake for 43.9 seconds. Start time: Thu Sep 27 19:59:03.118000 . 
+CELLULAR : BUG when device is awake for 45.2 seconds. Start time: Thu Sep 27 20:11:58.047500 . 
+CELLULAR : BUG when device is awake for 51.1 seconds. Start time: Thu Sep 27 20:19:03.063600 . 
+CELLULAR : BUG when device is awake for 64.4 seconds. Start time: Thu Sep 27 20:21:57.770300 . 
+CELLULAR : BUG when device is awake for 64.6 seconds. Start time: Thu Sep 27 20:33:57.997600 . 
+CELLULAR : BUG when device is awake for 83.4 seconds. Start time: Thu Sep 27 20:35:15.700600 . 
+ 
+--- RESULTS --- 
+HOST : Measured Avg HOST idle current 21.544056645 mA is lesser than the set HOST idle current limit (23 mA) --- PASS 
+WIFI :Measured overall Wifi current 0.37722078549 mA is lesser than the set Wifi overall current limit (1 mA) --- PASS 
+NCP : Measured Avg NCP idle current 20.7303674613 mA is higher than the set NCP idle current limit (20.6 mA) --- FAIL 
+CELLULAR : Measured Avg Cellular idle current 1.68218022727 mA is lesser than the set Cellular idle current limit(1.7 mA) --- PASS 
+ 
+Histogram Statistics
+ 
+No of wakes < 5s = 610
+No of wakes > 5s & < 10s = 163
+No of wakes > 10s  & < 20s = 67
+No of wakes > 20s  & < 30s = 6
+No of wakes > 30 s = 3
+
+Mean= 4.01428681272
+Std deviation: 4.88193565955
+Median: 2.1000798 
+========================================================= 
